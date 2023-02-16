@@ -1,4 +1,4 @@
-import { ADD_RATE, EDIT_RATE, DELETE_RATE } from "../actions/appActions";
+import { ADD_RATE, EDIT_RATE } from "../actions/appActions";
 
 export const appReducer = (state = [], action) => {
 	switch (action.type) {
@@ -17,10 +17,6 @@ export const appReducer = (state = [], action) => {
 					rate: action.payload.rate,
 				};
 			});
-		case DELETE_RATE:
-			return state.filter(
-				(currentStateElement) => currentStateElement.id !== action.payload.id
-			);
 
 		default:
 			console.warn(`No action ${action.type}`);

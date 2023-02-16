@@ -1,5 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
+import Form from "./Form";
+import List from "./List";
 
 import store from "./store/store";
 
@@ -9,7 +11,10 @@ function App() {
 	return (
 		<Provider store={store}>
 			<div className='App'>
-				<h2>Hello World</h2>
+				<h1>Hello World</h1>
+				<h3>Add some of your favorite authors to the top writers list.</h3>
+				<Form />
+				<List className='list' />
 			</div>
 		</Provider>
 	);
